@@ -67,7 +67,10 @@ function renderCards(list) {
  <h2>${m.title}</h2>
  <p class="year">${m.year}</p>
  </div>`;
+        card.dataset.id = m.id;
+        card.onclick = function () { alert(m.overview); };
         board.appendChild(card);
+     
     }
 }
 
@@ -87,3 +90,4 @@ function applySort() {
     renderCards(sortBy(movies, key, key !== "title"));
 }
 applySort();
+
